@@ -1,0 +1,422 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Syne Mono', monospace;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(53, 176, 187);
+}
+
+.logotipo{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.enlaces{
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+}
+
+.enlaces li{
+    list-style: none;
+}
+
+.enlaces a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.hamburguesa {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburguesa div{
+    width: 30px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px;
+    transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 1300px){
+    .enlaces{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 760px){
+    body{
+        overflow-x: hidden;
+    }
+    .enlaces{
+        position: absolute;
+        right: 0px;
+        height: 90vh;
+        top: 8vh;
+        background-color: rgb(53, 176, 187);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        transform: translate(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .enlaces li{
+        opacity: 0;
+    }
+    .hamburguesa{
+        display: block
+    }
+}
+
+.nav-active{
+    transform: translate(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .linea1{
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.toggle .linea2{
+    opacity: 0;
+}
+
+.toggle .linea3{
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(53, 176, 187);
+}
+
+.imagen{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.imagen .bien{
+    text-align: center;
+    padding-top: 150px;
+    font-size: 130px;
+    color: white;
+}
+
+.imagen .ita{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+    color: white;
+}
+
+.imagen .mole{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.footer{
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background-color: rgb(53, 176, 187);
+    color: white;
+}
+
+.bloque{
+    display: flex;
+    
+}
+
+.duda{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+
+.wai{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.recomen{
+    color: rgb(24, 95, 101);
+
+}
+
+.derechos{
+    color: rgb(24, 95, 101);
+}
+
+.padreev{
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hijo1ev{
+    display: block;
+    margin-right: 100px;
+}
+
+.hijo2ev{
+    display: block;
+}
+
+.hijo1ev h1{
+    font-size: 70px;
+}
+
+.hijo2ev h1{
+    font-size: 70px;
+    color: white;
+}
+
+.hijo1ev .uno{
+    color: #F1C40F;
+}
+
+.hijo1ev .dos{
+    color: #3498DB ;
+}
+
+.hijo1ev .tres{
+    color: #3498DB ;
+}
+
+.hijo1ev .cuatro{
+    color: #2ECC71;
+}
+
+.hijo1ev .cinco{
+    color: #C0392B;
+}
+
+.hijo1ev .seis{
+    color: #E67E22;
+}
+
+.hijo1ev .siete{
+    color: white;
+}
+
+.hijo1ev .ocho{
+    color: #F1C40F;
+}
+
+.colores{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.colores h1{
+    font-size: 20px;
+}
+
+.colores .b{
+    color: white;
+}
+
+.colores .az{
+    color: #3498DB;
+}
+
+.colores .v{
+    color: #2ECC71;
+}
+
+.colores .am{
+    color: #F1C40F;
+}
+
+.colores .n{
+    color: #E67E22;
+}
+
+.colores .r{
+    color: #C0392B;
+}
+
+.miembros{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.nombres{
+    font-size: 20px;
+    margin-right: 200px;
+}
+
+.nombres h1{
+    margin-bottom: 30px;
+}
+
+.nombres h1 a{
+    margin-bottom: 30px;
+    color: #3498DB;
+    text-decoration: none;
+}
+
+.fotos{
+    display: flex;
+    flex-direction: column;
+}
+
+.fotos img{
+    margin-bottom: 30px;
+}
+
+.nota{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    color: #3498DB;
+}
+
+.miem{
+    background-color: #DCFAFF;
+}
+
+.reglas{
+    font-size: 30px;
+    width: 75%;
+    padding-top: 80px;
+    margin-left: 300px;
+}
+
+.reglas ul li{
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.divmods{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 130px;
+}
+
+.divmods div{
+    background-image: url("imagen.png");
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    border-radius: 60px;
+}
+
+.divmods div a{
+    color:  white;
+    text-decoration: none;
+    text-align: center;
+    margin: auto;
+    font-size: 50px;
+}
+
+.divmods2{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.divmods2 div{
+    background-image: url("imagen.png");
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    border-radius: 60px;
+}
+
+.divmods2 div a{
+    color:  white;
+    text-decoration: none;
+    text-align: center;
+    margin: auto;
+    font-size: 50px;
+}
+
+.desa{
+    font-size: 20px;
+}
+
+.descargas{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.links{
+    font-size: 40px;
+}
+
+.links h1{
+    margin-bottom: 130px;
+}
+
+.links h1 a{
+    margin-bottom: 30px;
+    color: #3498DB;
+    text-decoration: none;
+}
+
+.imagenes{
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.imagenes img{
+    width: 150px;
+    margin-bottom: 60px;
+}
+
+.madaruwu{
+    text-decoration: none;
+    color: rgb(24, 95, 101);
+}
